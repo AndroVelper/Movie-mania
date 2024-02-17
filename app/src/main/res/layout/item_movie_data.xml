@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="3dp"
+    android:layout_marginHorizontal="10dp"
+    android:background="@drawable/white_circle_background">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/movieParent"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@drawable/image_corners"
+        app:strokeWidth="0dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/movieImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/favouriteParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_circle_background"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="5dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/favouriteListener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_favourite_inactive" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/shareParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/white_circle_background"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/favouriteParent"
+        app:layout_constraintEnd_toStartOf="@id/favouriteParent"
+        app:layout_constraintTop_toTopOf="@id/favouriteParent"
+        app:strokeWidth="0dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shareListener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/ic_share"
+            app:layout_constraintEnd_toStartOf="@id/favouriteParent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/movieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/bold"
+        android:maxLines="3"
+        android:text="@string/dumy_movie_name"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movieParent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/movieYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:fontFamily="@font/medium"
+        android:text="@string/year_2019"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movieName" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/movieType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:fontFamily="@font/medium"
+        android:text="@string/dummy_movie_type"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@id/movieYear"
+        app:layout_constraintStart_toEndOf="@id/movieYear"
+        app:layout_constraintTop_toTopOf="@id/movieYear" />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/gold"
+        android:progressTint="@color/gold"
+        android:rating="5.0"
+        android:scaleX="0.4"
+        android:scaleY="0.4"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/movieParent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
