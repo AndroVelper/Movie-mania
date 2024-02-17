@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="imageCorners">
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+    </style>
+
+    <style name="circularImage">
+        <item name="cornerSize">50%</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="roundedButtonStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- Adjust the corner radius as needed -->
+    </style>
+
+    <style name="customTheme"  parent="Theme.AppCompat.DayNight.Dialog.Alert" >
+
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+        <item name="android:textColorHint">@color/gold</item>
+    </style>
+
+
+</resources>

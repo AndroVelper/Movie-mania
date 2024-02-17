@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:padding="3dp"
+    android:layout_margin="20dp"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/dialogImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/circular_gray_background"
+        android:scaleType="fitXY"
+        android:src="@drawable/no_result_found"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circularImage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/bold"
+        android:maxLines="2"
+        android:text="@string/welcome_shubham"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/dialogImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/dialogImage"
+        app:layout_constraintTop_toTopOf="@+id/dialogImage" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/medium"
+        android:maxLines="3"
+        android:text="@string/welcome_shubham"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogImage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/white_circle_background"
+        android:paddingHorizontal="20dp"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogMessage"
+        app:shapeAppearanceOverlay="@style/roundedButtonStyle" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/removeFromList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/white_circle_background"
+        android:paddingHorizontal="20dp"
+        android:text="@string/remove_from_list"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelButton"
+        app:layout_constraintTop_toBottomOf="@+id/dialogMessage"
+        app:shapeAppearanceOverlay="@style/roundedButtonStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

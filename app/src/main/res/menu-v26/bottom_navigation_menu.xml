@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+    upper group with the fragment switch options
+    -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@id/homeFragment"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home"
+            android:tooltipText="@string/home"
+            android:titleCondensed="@string/home"
+             />
+        <item
+            android:id="@id/searchFragment"
+            android:contentDescription="@string/search"
+            android:icon="@drawable/ic_search"
+            android:tooltipText="@string/search"
+
+            android:title="@string/search"
+            />
+        <item
+            android:id="@id/categoriesFragment"
+            android:contentDescription="@string/category"
+            android:icon="@drawable/ic_category"
+            android:tooltipText="@string/category"
+            android:title="@string/category" />
+
+        <item
+            android:title="@string/communication"
+            >
+
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:id="@id/language"
+                    android:icon="@drawable/ic_language"
+                    android:title="@string/language"
+                    app:showAsAction="ifRoom" />
+                <item
+                    android:id="@id/aboutUs"
+                    android:icon="@drawable/ic_about"
+                    android:title="@string/about_us"
+                    app:showAsAction="ifRoom" />
+                <item
+                    android:id="@id/contactUs"
+                    android:icon="@drawable/ic_contact"
+                    android:title="@string/contact_us"
+                    app:showAsAction="ifRoom" />
+                </group>
+            </menu>
+        </item>
+
+    </group>
+</menu>
